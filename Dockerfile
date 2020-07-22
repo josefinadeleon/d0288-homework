@@ -5,5 +5,7 @@ COPY config/server.env /config/
 
 USER root
 
-MKDIR /my-special-folder
+RUN mkdir /my-special-folder
+RUN echo "Hello world" > /my-special-folder/greeting
+VOLUME /my-special-folder
 COPY Dockerfile /my-special-folder 
